@@ -1,7 +1,5 @@
 import eel
 import wave
-import binascii
-
 
 eel.init('web')
 

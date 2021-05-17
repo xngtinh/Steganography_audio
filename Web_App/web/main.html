@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKT Stegan tool || FIT HCMUE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/main_script.js"></script>
+</head>
+
+<body>
+    
+    <h1 id='heading'>Steganography in Audio</h1>
+    <div class="tab">
+      <button class="tablinks active" onclick="openCity(event, 'London')">Encoder</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Decoder</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">About</button>
+    </div>
+    <div id="London" class="tabcontent" style="display:block">
+        <div style="margin-bottom: 20px">
+
+            <p>Instruction: <i>Please upload audio in <strong>.wav</strong> format. Then, enter your secret message. Push Encoder button, have fun :))</i></p>
+
+        </div>
+        <div id = "mainDiv">
+            <div style="display:block">
+            <label for="song_path">Target file</label>
+            <input class="input is-small" id = "song_path" type="file" accept=".wav"><br>
+            </div>
+            <label for="message">Message</label>
+            <textarea class=" is-small" id = "message" rows="8" cols="50" type="text" placeholder="Enter the secret message "></textarea><br>
+            <button class="button is-link" onclick=perform_steg()  id="enBtn">Encoder</button>
+        </div>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <div style="margin-bottom: 20px">
+            <p>Instruction: <i>Please upload audio in <strong>.wav</strong> format. Push Decoder button, have fun :))</i></p>
+        </div>
+      <div id = "mainDiv">
+        <br>
+        <label for="file">File to Decode</label>
+        <input class="input is-small" id = "file" type="file" accept=".wav">
+          <button class="button is-link" onclick=recover_steg()>Decoder</button><hr>
+        <label for="Demessage">Message</label>
+          <textarea style="pointer-events: none" class=" is-small" id = "Demessage" rows="8" cols="50" ></textarea><br>
+
+      </div>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+
+        <div  style="text-align:center">
+            <h3>This is a Web App demo for Final Computer Security's Project || FIT HCMUE </h3>
+            <h2>About HKT Team</h2>
+        </div>
+
+      <div class="row container" >
+          <div class="container" style="margin-left:15%">
+                <div class="card" >
+                    <p style="text-align:center">Võ Tuấn Hào</p>
+                    <p style="text-align:center">44.01.104.081</p>
+                    <div class="face face1">
+                        <div class="content">
+                            <div class="icon">
+                                <img src="img/Hao.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="container">
+                <div class="card">
+                    <p style="text-align:center">Bùi Chí Tùng</p>
+                    <p style="text-align:center">44.01.104.200</p>
+                    <div class="face face1">
+                        <div class="content">
+                            <div class="icon">
+                                <img src="img/Tung.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+      </div>
+        <br>
+      <div class="row container">
+          <div class="container" style="margin-left:5%">
+                <div class="card">
+                    <p style="text-align:center">Lâm Phát Tài</p>
+                    <p style="text-align:center">44.01.104.188</p>
+                    <div class="face face1">
+                        <div class="content">
+                            <div class="icon">
+                                <img src="img/tai.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+          <div class="container">
+                <div class="card">
+                    <p style="text-align:center">Nguyễn Xuân Tính</p>
+                    <p style="text-align:center">44.01.104.196</p>
+                    <div class="face face1">
+                        <div class="content">
+                            <div class="icon">
+                                <img src="img/Tinh.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+          <div class="container">
+                <div class="card">
+                    <p style="text-align:center">Lâm Hoàng Khánh</p>
+                    <p style="text-align:center">44.01.104.112</p>
+                    <div class="face face1">
+                        <div class="content">
+                            <div class="icon">
+                                <img src="img/Khanh.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+      </div>
+    </div>
+
+
+    </div>
+
+
+</body>
+</html>

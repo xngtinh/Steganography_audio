@@ -19,7 +19,7 @@ def steg(song_path,message):
 
     # Append dummy data to fill out rest of the bytes. Receiver shall detect and remove these characters.
     message = message + int((len(frame_bytes)-(len(message)*8*8))/8) *'#'
-    print(int((len(frame_bytes)-(len(message)*8*8))/8))
+    #print(int((len(frame_bytes)-(len(message)*8*8))/8))
     # Convert text to bit array
     bits = list(map(int, ''.join([bin(ord(i)).lstrip('0b').rjust(8,'0') for i in message])))
 
